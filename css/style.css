@@ -1,0 +1,466 @@
+/* =============================================================
+   MOHIT KC — PORTFOLIO STYLESHEET
+   ---------------------------------------------------------------
+   COLOR PALETTE (used consistently throughout this file):
+     #f5f5f5  - page background
+     #333     - primary body text / default borders on hover-focus
+     #242424  - headings (h2, dt)
+     #666     - secondary/muted paragraph text
+     #545454  - muted link text (projects, pills)
+     #999999  - hover state for links/nav (single shared hover tone)
+     #ccc     - default hairline borders
+     #191919  - footer background
+     #bcbcbc  - footer text/links (unfocused)
+
+   BORDER RADIUS: 6px used on every rounded element
+   (button, pills, project cards, form fields) for consistency.
+
+   Structure: Base -> Header/Nav -> Hero -> Sections
+              -> Skills -> Projects -> Contact -> Footer -> Media Queries
+   ============================================================= */
+
+/* -----------------------------------------------------------
+   1. BASE / RESET
+   ----------------------------------------------------------- */
+* {
+  box-sizing: border-box; /* padding/border no longer add to width anywhere */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p {
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: #242424;
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1.8rem;
+  background-color: #242424;
+  margin-right: 10px;
+  vertical-align: -0.2em;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: #242424;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 5%;
+}
+
+/* -----------------------------------------------------------
+   2. HEADER / NAV
+   ----------------------------------------------------------- */
+header {
+  border: 1px solid #ccc;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  font-size: 0.875rem;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  color: #999999;
+  transition: color 0.5s;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: solid 1px #333;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+}
+
+button:hover {
+  background-color: #939393;
+  color: #000;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+}
+
+/* -----------------------------------------------------------
+   3. HERO
+   ----------------------------------------------------------- */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 180px 5%;
+  gap: 80px;
+  font-size: 0.875rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-text,
+.hero-visuals {
+  flex: 1;
+}
+
+.hero-visuals {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hero-heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -20px;
+}
+
+.firstname {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 0.4;
+  letter-spacing: -0.09em;
+}
+
+.lastname {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 10rem;
+  font-weight: 500;
+  letter-spacing: -0.1em;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: #545454;
+}
+
+.hero-text p {
+  max-width: 500px;
+}
+
+.image-container {
+  filter: grayscale(100%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -100px;
+  margin-bottom: 10px;
+}
+
+.image-container img {
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+.image-container:hover {
+  filter: grayscale(0%);
+  transition: filter 2.1s;
+}
+
+.pill-group,
+.image-caption {
+  margin-left: 20%;
+}
+
+.image-caption {
+  color: #666;
+  max-width: 500px;
+}
+
+.pill {
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 1px;
+  font-size: 12px;
+  color: #545454;
+}
+
+/* -----------------------------------------------------------
+   4. SECTION SPACING (shared by skills/projects/contact)
+   ----------------------------------------------------------- */
+#skills,
+#projects,
+#contact {
+  padding: 40px 5%;
+}
+
+/* -----------------------------------------------------------
+   5. SKILLS — two-column term/description grid
+   ----------------------------------------------------------- */
+#skills dl {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  row-gap: 30px;
+  column-gap: 60px;
+  margin: 0;
+}
+
+#skills dt {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: #242424;
+  align-self: baseline;
+  border-bottom: 0.5px solid #aaa;
+  padding-bottom: 15px;
+}
+
+#skills dd {
+  align-self: baseline;
+  max-width: 70%;
+  margin: 0;
+}
+
+/* -----------------------------------------------------------
+   6. PROJECTS — stacked full-width cards
+   ----------------------------------------------------------- */
+#projects article {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px 2%;
+  margin: 20px 0;
+  max-width: 1300px;
+}
+
+#projects article p {
+  max-width: 900px;
+  line-height: 1.3rem;
+}
+
+#projects article:hover {
+  border-color: #333;
+  transition: border-color 1s;
+}
+
+#projects article a {
+  color: #545454;
+}
+
+#projects article a:hover {
+  color: #999999;
+  transition: color 1s;
+}
+
+/* -----------------------------------------------------------
+   7. CONTACT FORM
+   ----------------------------------------------------------- */
+#contact form {
+  max-width: 500px;
+}
+
+#contact label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+}
+
+#contact textarea {
+  resize: vertical;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/* -----------------------------------------------------------
+   8. FOOTER
+   ----------------------------------------------------------- */
+footer {
+  padding: 10px 5%;
+  background-color: #191919;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+footer p,
+footer a {
+  color: #bcbcbc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+/* =============================================================
+   RESPONSIVE — TABLET & BELOW
+   ============================================================= */
+@media (max-width: 900px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding: 100px 5%;
+    gap: 40px;
+  }
+
+  .firstname,
+  .lastname {
+    font-size: 4rem;
+  }
+
+  .hero-heading {
+    margin-bottom: 10px;
+  }
+
+  .image-container {
+    margin-top: 0;
+  }
+
+  .pill-group,
+  .image-caption {
+    margin-left: 0;
+  }
+
+  #skills dl {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 8px;
+  }
+
+  #skills dt {
+    padding-bottom: 6px;
+  }
+
+  #skills dd {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  #projects article {
+    padding: 15px 5%;
+    max-width: 100%;
+  }
+
+  #projects article p {
+    max-width: 100%;
+  }
+
+  #contact form {
+    max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* =============================================================
+   RESPONSIVE — PHONES
+   ============================================================= */
+@media (max-width: 500px) {
+
+  .firstname,
+  .lastname {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h2::before {
+    height: 1.4rem;
+  }
+
+  #skills dt {
+    font-size: 1.2rem;
+  }
+}

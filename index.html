@@ -1,147 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohit KC — Portfolio</title>
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Mohit KC</h1>
-        <p>Creative Technologist &amp; UI/UX Designer in Training — Kathmandu, Nepal</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="index.html"
+        ><img src="images/logo.svg" alt="Mohit KC logo" width="25"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li>
+            <button
+              id="ContactButton"
+              onclick="window.location.href = '#contact'"
+            >
+              Contact
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <section id="about" class="hero-container">
+        <div class="hero-text">
+          <div class="hero-heading">
+            <span class="firstname">Mohit</span>
+            <span class="lastname">KC</span>
+          </div>
+          <span class="tagline">Creative Technologist &amp; UI/UX Designer - Kathmandu, Nepal</span>
+          <p>
+            I'm a second-year Bachelor of Information Technology (BIT) student
+            at Model Institute of Technology, based in Kathmandu, Nepal. My
+            background is in creative direction and brand strategy — I've
+            designed campaigns, built event identities, and led a student
+            entrepreneurship club from the ground up — and I'm now extending
+            that into UI/UX and front-end development.
+          </p>
+        </div>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Portrait photo of Mohit KC, smiling, outdoor background" width="250">
+        <div class="hero-visuals">
+          <div class="image-container">
+            <img src="images/mainimage.png" alt="Headshot" width="700" />
+          </div>
+          <div class="pill-group">
+            <span class="pill">Creative Tech</span>
+            <span class="pill">UI/UX</span>
+            <span class="pill">Linux</span>
+            <span class="pill">Branding</span>
+            <span class="pill">Figma</span>
+          </div>
+          <div class="image-caption">
             <p>
-                I'm a second-year Bachelor of Information Technology (BIT) student at Model Institute
-                of Technology, based in Kathmandu, Nepal. My background is in creative direction and
-                brand strategy — I've designed campaigns, built event identities, and led a student
-                entrepreneurship club from the ground up — and I'm now extending that into UI/UX and
-                front-end development.
+              I learn by building. Rather than waiting until I "know enough" to
+              start, I direct real, functional projects end-to-end — combining
+              design thinking with AI-assisted development to ship working
+              software, not just mockups. This portfolio marks the start of
+              building those technical fundamentals properly, on my own.
             </p>
-            <img src="images/mainimage.png" alt="Headshot" width="400">
-            <p>
-                I learn by building. Rather than waiting until I "know enough" to start, I direct
-                real, functional projects end-to-end — combining design thinking with AI-assisted
-                development to ship working software, not just mockups. This portfolio marks the
-                start of building those technical fundamentals properly, on my own.
-            </p>
-        </section>
-        <hr>
+          </div>
+        </div>
+      </section>
+      <hr />
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <dl>
-                <dt>HTML5</dt>
-                <dd>Semantic markup and accessible page structure.</dd>
+      <section id="skills">
+        <h2>Technical Skills</h2>
+        <dl>
+          <dt>HTML5</dt>
+          <dd>Semantic markup and accessible page structure.</dd>
 
-                <dt>CSS3</dt>
-                <dd>Foundational styling and layout concepts; currently deepening this skill.</dd>
+          <dt>CSS3</dt>
+          <dd>
+            Foundational styling and layout concepts; currently deepening this
+            skill.
+          </dd>
 
-                <dt>JavaScript</dt>
-                <dd>Basic DOM manipulation and event handling.</dd>
+          <dt>JavaScript</dt>
+          <dd>Basic DOM manipulation and event handling.</dd>
 
-                <dt>Python</dt>
-                <dd>Used to build functional tools, including an event registration web app
-                    (NiceGUI) and an automated PDF ticket-generation pipeline (ReportLab, pikepdf).</dd>
+          <dt>Python</dt>
+          <dd>
+            Used to build functional tools, including an event registration web
+            app (NiceGUI) and an automated PDF ticket-generation pipeline
+            (ReportLab, pikepdf).
+          </dd>
 
-                <dt>UI/UX Design</dt>
-                <dd>Currently studying user flows, wireframing, and interaction design; applying
-                    it to redesign existing personal projects as case studies.</dd>
+          <dt>UI/UX Design</dt>
+          <dd>
+            Currently studying user flows, wireframing, and interaction design;
+            applying it to redesign existing personal projects as case studies.
+          </dd>
 
-                <dt>AI-Assisted Development</dt>
-                <dd>Experienced in directing AI coding tools to architect and ship complete,
-                    working products — from concept and system design through to a functioning build.</dd>
+          <dt>AI-Assisted Development</dt>
+          <dd>
+            Experienced in directing AI coding tools to architect and ship
+            complete, working products — from concept and system design through
+            to a functioning build.
+          </dd>
 
-                <dt>Graphic &amp; Brand Design</dt>
-                <dd>Visual identity systems, campaign design, and social media content, developed
-                    professionally for organizations including Idea Studio Nepal.</dd>
-            </dl>
-        </section>
-        <hr>
+          <dt>Graphic &amp; Brand Design</dt>
+          <dd>
+            Visual identity systems, campaign design, and social media content,
+            developed professionally for organizations including Idea Studio
+            Nepal.
+          </dd>
+        </dl>
+      </section>
+      <hr />
 
-        <section id="projects">
-            <h2>Projects</h2>
+      <section id="projects">
+        <h2>Projects</h2>
 
-            <article>
-                <h3>Event Registration System</h3>
-                <p>
-                    A lightweight web application built with Python and NiceGUI for collecting
-                    attendee registrations at a live event. Includes conditional form logic
-                    (refreshment preferences), duplicate-submission prevention using browser
-                    storage, and a separate volunteer-entry flow.
-                </p>
-                <p><a href="https://github.com/your-username/event-registration-system">View repository →</a></p>
-            </article>
+        <article>
+          <h3>Event Registration System</h3>
+          <p>
+            A lightweight web application built with Python and NiceGUI for
+            collecting attendee registrations at a live event. Includes
+            conditional form logic (refreshment preferences),
+            duplicate-submission prevention using browser storage, and a
+            separate volunteer-entry flow.
+          </p>
+          <p>
+            <a href="https://github.com/your-username/event-registration-system"
+              >View repository →</a
+            >
+          </p>
+        </article>
 
-            <article>
-                <h3>Automated Ticket Generation Pipeline</h3>
-                <p>
-                    A Python pipeline that generates unique, print-ready event tickets at scale —
-                    combining a CSV attendee list, per-ticket QR codes, and serial numbers, overlaid
-                    onto a branded background and merged into a single production-ready PDF.
-                </p>
-                <p><a href="https://github.com/your-username/ticket-generation-pipeline">View repository →</a></p>
-            </article>
+        <article>
+          <h3>Automated Ticket Generation Pipeline</h3>
+          <p>
+            A Python pipeline that generates unique, print-ready event tickets
+            at scale — combining a CSV attendee list, per-ticket QR codes, and
+            serial numbers, overlaid onto a branded background and merged into a
+            single production-ready PDF.
+          </p>
+          <p>
+            <a
+              href="https://github.com/your-username/ticket-generation-pipeline"
+              >View repository →</a
+            >
+          </p>
+        </article>
 
-            <article>
-                <h3>Project Kura — Product &amp; Technical Architecture</h3>
-                <p>
-                    An in-progress concept for a verified-respondent survey platform. I authored
-                    the full technical whitepaper — covering the economic model, a weighted
-                    trust-scoring engine, a privacy-separated data architecture, and the API
-                    surface — as the specification for a future build.
-                </p>
-                <p><a href="https://kura.mohitkc.com.np/">View live waitlist →</a></p>
-            </article>
+        <article>
+          <h3>Project Kura — Product &amp; Technical Architecture</h3>
+          <p>
+            An in-progress concept for a verified-respondent survey platform. I
+            authored the full technical whitepaper — covering the economic
+            model, a weighted trust-scoring engine, a privacy-separated data
+            architecture, and the API surface — as the specification for a
+            future build.
+          </p>
+          <p><a href="https://kura.mohitkc.com.np/">View live waitlist →</a></p>
+        </article>
+      </section>
+      <hr />
 
-        </section>
-        <hr>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="#" method="post">
-                <p>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required>
-                </p>
-                <p>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </p>
-                <p>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="6" cols="40" required></textarea>
-                </p>
-                <p>
-                    <button type="submit">Send Message</button>
-                </p>
-            </form>
-        </section>
-        <hr>
-
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+          <p>
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" placeholder="e.g. Mohit KC" required />
+          </p>
+          <p>
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+          </p>
+          <p>
+            <label for="message">Message:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              cols="50"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+          </p>
+          <p>
+            <button type="submit">Send Message</button>
+          </p>
+        </form>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Mohit KC. Built for CSE 230 — Web Design and Development.</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/mohit-kc131">LinkedIn</a></li>
-            <li><a href="mailto:kcmohit360@gmail.com">Email</a></li>
-        </ul>
+    <footer id="footer">
+      <p>
+        &copy; 2026 Mohit KC. Built for CSE 230 — Web Design and Development.
+      </p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/mohit-kc131">LinkedIn</a></li>
+        <li><a href="mailto:kcmohit360@gmail.com">Email</a></li>
+      </ul>
     </footer>
-
-</body>
+  </body>
 </html>
